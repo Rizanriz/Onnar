@@ -13,7 +13,7 @@ const Testimonial = () => {
     // Clone the first set of testimonials and append to end for seamless looping
     const cloneTestimonials = () => {
       const testimonials = carousel.children;
-      const cloneCount = Math.ceil(window.innerWidth / 480) || 1;
+      const cloneCount = Math.ceil(window.innerWidth / 400) || 1; // Adjusted for responsiveness
       
       for (let i = 0; i < cloneCount; i++) {
         const clone = testimonials[i].cloneNode(true);
@@ -27,8 +27,8 @@ const Testimonial = () => {
     let animationFrame;
     let startTime;
     const duration = 20000; // 20 seconds for full loop
-    const itemWidth = 480 + 24; // width + gap
-    const totalWidth = itemWidth * testimonials.length;
+    const itemWidth = () => window.innerWidth < 768 ? 300 + 24 : 480 + 24; // Responsive width + gap
+    const totalWidth = itemWidth() * testimonials.length;
 
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
@@ -62,10 +62,27 @@ const Testimonial = () => {
     track.addEventListener('mouseenter', pauseAnimation);
     track.addEventListener('mouseleave', resumeAnimation);
 
+    // Handle window resize
+    const handleResize = () => {
+      cancelAnimationFrame(animationFrame);
+      // Remove clones
+      while (carousel.children.length > testimonials.length) {
+        carousel.removeChild(carousel.lastChild);
+      }
+      // Add new clones based on current width
+      cloneTestimonials();
+      // Restart animation
+      startTime = performance.now();
+      animationFrame = requestAnimationFrame(animate);
+    };
+
+    window.addEventListener('resize', handleResize);
+
     return () => {
       cancelAnimationFrame(animationFrame);
       track.removeEventListener('mouseenter', pauseAnimation);
       track.removeEventListener('mouseleave', resumeAnimation);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
@@ -92,16 +109,16 @@ const Testimonial = () => {
 };
 
 const TestimonialCard = ({ rating, text, name, title }) => (
-  <div className="w-[480px] mt-5 mb-5 flex-shrink-0 bg-[#d6bfa4] text-black hover:text-white  rounded-2xl p-8 shadow-lg border border-[rgba(226,205,179,0.15)] transition-all duration-400 hover:scale-103 hover:shadow-xl hover:bg-[#46171A] cursor-pointer">
+  <div className="w-[300px] md:w-[480px] flex-shrink-0 bg-[#d6bfa4] text-black hover:text-white rounded-2xl p-6 md:p-8 shadow-lg border border-[rgba(226,205,179,0.15)] transition-all duration-300 hover:bg-[#46171A] cursor-pointer transform hover:scale-[1.03]">
     <div className="flex justify-center gap-1 mb-5 text-xl text-[#fcde34]">
       {"★".repeat(5)}
     </div>
-    <p className="text-base italic leading-relaxed mb-6 relative">
+    <p className="text-sm md:text-base italic leading-relaxed mb-6 relative">
       {text}
     </p>
     <div className="pt-5 border-t border-[rgba(226,205,179,0.2)]">
-      <h3 className=" text-lg font-semibold mb-2">{name}</h3>
-      <p className="text-sm">{title}</p>
+      <h3 className="text-base md:text-lg font-semibold mb-2">{name}</h3>
+      <p className="text-xs md:text-sm">{title}</p>
     </div>
   </div>
 );

@@ -13,7 +13,11 @@ const config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function({ addVariant }) {
+      addVariant('interaction', ['&:hover', '&:focus', '&:active'])
+    }
+  ],
 }
 
 export default config

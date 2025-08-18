@@ -5,6 +5,7 @@ import Section2 from './components/Section2'
 import Testimonial from './components/Testimonial'
 import Footer from './components/Footer'
 import MenuItems from './components/MenuItems'
+import DeliveryInfo from './components/DeliveryInfo'
 const App = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const App = () => {
       <Hero/>
       <Section2/>
       <MenuItems/>
+      <DeliveryInfo/>
       <Testimonial/>
       <Footer/>
     </div>

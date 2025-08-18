@@ -61,7 +61,7 @@ const Footer = () => {
         <div className="flex flex-col items-center text-center gap-3 animate-[fadeInUp_0.8s_ease-out_0.6s_forwards]">
           <div className="flex flex-col items-center gap-2">
             <div className="w-24">
-              <img src="./logofooter.png" alt="Ulu Amir Group Logo" />
+              <img src="/logo.png" alt="Ulu Amir Group Logo" />
             </div>
             <div className="text-[#e6e4d8] text-sm">Ulu Amir Group</div>
           </div>

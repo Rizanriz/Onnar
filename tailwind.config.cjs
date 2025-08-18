@@ -1,6 +1,4 @@
-// tailwind.config.js
-
-/** @type {Config} */
+/** @type {import('tailwindcss').Config} */
 const config = {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
@@ -15,9 +13,17 @@ const config = {
   },
   plugins: [
     function({ addVariant }) {
-      addVariant('interaction', ['&:hover', '&:focus', '&:active'])
+      // individual element: hover, focus, active
+      addVariant('interaction', ['&:hover', '&:focus', '&:active']);
+      
+      // group variant for children
+      addVariant('group-interaction', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.group:hover .${className}, .group:focus .${className}, .group:active .${className}`;
+        });
+      });
     }
   ],
 }
 
-export default config
+export default config;

@@ -77,11 +77,11 @@ const Testimonial = () => {
   return (
     <section className="py-16 bg-white relative overflow-hidden">
       <h2 className="text-5xl text-[#46171A] font-wa-flat font-medium text-center mb-8 relative z-10">
-        Testimonials
+        Client Testimonials
       </h2>
       <div
         ref={trackRef}
-        className="max-w-6xl mx-auto relative px-4 overflow-hidden"
+        className="max-w-[90%] mx-auto relative px-4 overflow-hidden"
       >
         <div ref={carouselRef} className="flex gap-6 w-max">
           {testimonialsData.map((testimonial, index) => (
@@ -96,7 +96,7 @@ const Testimonial = () => {
 const TestimonialCard = ({ rating, text, name, title }) => (
   <div className="w-[300px] md:w-[480px] flex-shrink-0 bg-[#d6bfa4] text-black rounded-2xl p-6 md:p-8 shadow-lg border border-[rgba(226,205,179,0.15)] transition-all duration-300
                   hover">
-    <div className="flex justify-center gap-1 mb-5 text-xl text-[#fcde34]">
+    <div className="flex justify-start gap-1 mb-5 text-xl">
       {"★".repeat(rating)}
     </div>
     <p className="text-sm md:text-base italic leading-relaxed mb-6 relative">{text}</p>

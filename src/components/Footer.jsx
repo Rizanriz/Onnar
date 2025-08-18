@@ -36,7 +36,7 @@ const Footer = () => {
             />
             <button
               type="submit"
-              className="px-6 py-2 bg-gradient-to-br from-[#D44D1F] to-[#e67e22] text-white font-semibold rounded-full transition-all duration-400 hover:-translate-y-0.5 focus:-translate-y-0.5 hover:shadow-lg focus:shadow-lg shadow-md"
+              className="px-6 py-2 cursor-pointer bg-gradient-to-br from-[#D44D1F] to-[#e67e22] text-white font-semibold rounded-full transition-all duration-400 hover:-translate-y-0.5 focus:-translate-y-0.5 hover:shadow-lg focus:shadow-lg shadow-md"
             >
               Submit
             </button>
@@ -65,13 +65,13 @@ const Footer = () => {
             </div>
             <div className="text-[#e6e4d8] text-sm">Ulu Amir Group</div>
           </div>
-          <p className="text-sm text-[#d4d2c5] leading-relaxed mt-2 transition-all duration-300 hover:text-[#e6dcc0] focus:text-[#e6dcc0] hover:translate-x-1 focus:translate-x-1">
+          <p className="text-sm text-[#d4d2c5]  leading-relaxed mt-2">
             Craft businesses that reflect excellence, elevate local identity, and resonate with global standards.
           </p>
 
           {/* Contact Info */}
           <div className="mt-4 space-y-3 flex flex-col items-center">
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 cursor-pointer">
 
               {/* Phone */}
               <div className="group flex gap-3 items-center p-1 rounded-lg transition-all duration-300 hover:bg-[rgba(255,255,255,0.05)] focus:bg-[rgba(255,255,255,0.05)] hover:translate-x-1 focus:translate-x-1">

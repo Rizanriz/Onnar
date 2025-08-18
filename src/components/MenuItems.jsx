@@ -64,10 +64,10 @@ const MenuItems = () => {
         
         {/* Bottom Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-[#46171A] cursor-pointer text-white font-wa-flat text-xl tracking-widest px-8 py-3 rounded-full font-light hover:bg-[#D44D1F] transition-colors duration-300">
+          <button className="bg-[#46171A] cursor-pointer text-white font-wa-flat text-xl tracking-widest px-8 py-3 rounded-full font-light hover:bg-[#D44D1F] active:bg-[#D44D1F] focus:bg-[#D44D1F] transition-colors duration-300">
             MAKE A RESERVATION
           </button>
-          <button className="bg-[#D6BFA4] cursor-pointer font-wa-flat text-[#46171A] text-xl tracking-widest px-8 py-3 rounded-full font-semibold hover:bg-[#F15A24] transition-colors duration-300">
+          <button className="bg-[#D6BFA4] cursor-pointer font-wa-flat text-[#46171A] text-xl tracking-widest px-8 py-3 rounded-full font-semibold hover:bg-[#F15A24] active:bg-[#F15A24] focus:bg-[#F15A24] transition-colors duration-300">
             DOWNLOAD THE MENU CARD
           </button>
         </div>

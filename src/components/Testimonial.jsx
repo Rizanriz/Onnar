@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-
 const Testimonial = () => {
   const carouselRef = useRef(null);
   const trackRef = useRef(null);
@@ -77,7 +76,7 @@ const Testimonial = () => {
 
   return (
     <section className="py-16 bg-white relative overflow-hidden">
-      <h2 className="text-4xl text-[#46171A] font-medium text-center mb-8 relative z-10">
+      <h2 className="text-5xl text-[#46171A] font-wa-flat font-medium text-center mb-8 relative z-10">
         Testimonials
       </h2>
       <div
@@ -96,9 +95,7 @@ const Testimonial = () => {
 
 const TestimonialCard = ({ rating, text, name, title }) => (
   <div className="w-[300px] md:w-[480px] flex-shrink-0 bg-[#d6bfa4] text-black rounded-2xl p-6 md:p-8 shadow-lg border border-[rgba(226,205,179,0.15)] transition-all duration-300
-                  hover:bg-[#46171A] hover:text-white hover:scale-[1.03]
-                  focus:bg-[#46171A] focus:text-white focus:scale-[1.03]
-                  active:bg-[#46171A] active:text-white active:scale-[1.03] cursor-pointer">
+                  hover">
     <div className="flex justify-center gap-1 mb-5 text-xl text-[#fcde34]">
       {"★".repeat(rating)}
     </div>

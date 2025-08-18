@@ -24,8 +24,10 @@
 }
 
 
-.hover{
+.hover:hover{
   cursor: pointer;
   transition: all .3s ease-in-out;
-  
+  background-color: #46171A;
+  color:#fff;
+  transform: scale(1.03);
 }

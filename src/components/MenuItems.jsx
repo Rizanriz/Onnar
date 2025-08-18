@@ -9,7 +9,7 @@ import food7 from '/food1.png';
 import food8 from '/food1.png';
 import food9 from '/food1.png';
 
-const MenuSection = () => {
+const MenuItems = () => {
   const menuItems = [
     { title: 'On Nar', subtitle: 'RESTAURANT', buttonText: 'EXPLORE', img: food1 },
     { title: 'On Nar', subtitle: 'RESTAURANT', buttonText: 'EXPLORE', img: food2 },
@@ -76,4 +76,4 @@ const MenuSection = () => {
   );
 };
 
-export default MenuSection;
+export default MenuItems;

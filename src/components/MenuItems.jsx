@@ -43,7 +43,7 @@ const MenuItems = () => {
                   
                   {/* Button */}
                   <button 
-                    className={`px-8 py-2 text-sm font-bold rounded-lg transition-colors cursor-pointer duration-300 bg-white text-red-700 hover:bg-[#F15A24] hover:text-white`}
+                    className={`px-8 py-2 text-sm font-bold rounded-lg transition-colors cursor-pointer duration-300 bg-white text-red-700 hover:bg-[#F15A24] active:bg-[#F15A24] hover:text-white active:text-white focus:bg-[#F15A24] focus:text-white`}
                   >
                     {item.buttonText}
                   </button>

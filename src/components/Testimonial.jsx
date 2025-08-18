@@ -10,11 +10,11 @@ const Testimonial = () => {
     
     if (!carousel || !track) return;
 
-    // Clone the first set of testimonials and append to end for seamless looping
+    const testimonials = carousel.children;
+
+    // Clone the first set of testimonials for seamless loop
     const cloneTestimonials = () => {
-      const testimonials = carousel.children;
-      const cloneCount = Math.ceil(window.innerWidth / 400) || 1; // Adjusted for responsiveness
-      
+      const cloneCount = Math.ceil(window.innerWidth / 400) || 1;
       for (let i = 0; i < cloneCount; i++) {
         const clone = testimonials[i].cloneNode(true);
         carousel.appendChild(clone);
@@ -26,63 +26,52 @@ const Testimonial = () => {
     // Animation setup
     let animationFrame;
     let startTime;
-    const duration = 20000; // 20 seconds for full loop
-    const itemWidth = () => window.innerWidth < 768 ? 300 + 24 : 480 + 24; // Responsive width + gap
+    const duration = 50000;
+    const itemWidth = () => (window.innerWidth < 768 ? 324 : 504); // width + gap
     const totalWidth = itemWidth() * testimonials.length;
 
     const animate = (timestamp) => {
       if (!startTime) startTime = timestamp;
       const elapsed = timestamp - startTime;
       const progress = (elapsed % duration) / duration;
-      
-      // Calculate the translateX value
       const translateX = -progress * totalWidth;
       carousel.style.transform = `translateX(${translateX}px)`;
-      
-      // Reset position when animation completes
-      if (progress >= 0.999) {
-        startTime = timestamp;
-      }
-      
       animationFrame = requestAnimationFrame(animate);
     };
 
     animationFrame = requestAnimationFrame(animate);
 
-    // Pause on hover
-    const pauseAnimation = () => {
-      cancelAnimationFrame(animationFrame);
-    };
-
+    // Pause on hover/focus
+    const pauseAnimation = () => cancelAnimationFrame(animationFrame);
     const resumeAnimation = () => {
       startTime = performance.now() - ((performance.now() - startTime) % duration);
       animationFrame = requestAnimationFrame(animate);
     };
 
-    track.addEventListener('mouseenter', pauseAnimation);
-    track.addEventListener('mouseleave', resumeAnimation);
+    track.addEventListener("mouseenter", pauseAnimation);
+    track.addEventListener("mouseleave", resumeAnimation);
+    track.addEventListener("focusin", pauseAnimation);
+    track.addEventListener("focusout", resumeAnimation);
 
-    // Handle window resize
     const handleResize = () => {
       cancelAnimationFrame(animationFrame);
-      // Remove clones
       while (carousel.children.length > testimonials.length) {
         carousel.removeChild(carousel.lastChild);
       }
-      // Add new clones based on current width
       cloneTestimonials();
-      // Restart animation
       startTime = performance.now();
       animationFrame = requestAnimationFrame(animate);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
       cancelAnimationFrame(animationFrame);
-      track.removeEventListener('mouseenter', pauseAnimation);
-      track.removeEventListener('mouseleave', resumeAnimation);
-      window.removeEventListener('resize', handleResize);
+      track.removeEventListener("mouseenter", pauseAnimation);
+      track.removeEventListener("mouseleave", resumeAnimation);
+      track.removeEventListener("focusin", pauseAnimation);
+      track.removeEventListener("focusout", resumeAnimation);
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
 
@@ -91,15 +80,12 @@ const Testimonial = () => {
       <h2 className="text-4xl text-[#46171A] font-medium text-center mb-8 relative z-10">
         Testimonials
       </h2>
-      <div 
+      <div
         ref={trackRef}
         className="max-w-6xl mx-auto relative px-4 overflow-hidden"
       >
-        <div 
-          ref={carouselRef}
-          className="flex gap-6 w-max"
-        >
-          {testimonials.map((testimonial, index) => (
+        <div ref={carouselRef} className="flex gap-6 w-max">
+          {testimonialsData.map((testimonial, index) => (
             <TestimonialCard key={index} {...testimonial} />
           ))}
         </div>
@@ -109,13 +95,14 @@ const Testimonial = () => {
 };
 
 const TestimonialCard = ({ rating, text, name, title }) => (
-  <div className="w-[300px] md:w-[480px] flex-shrink-0 bg-[#d6bfa4] text-black hover:text-white rounded-2xl p-6 md:p-8 shadow-lg border border-[rgba(226,205,179,0.15)] transition-all duration-300 hover:bg-[#46171A] cursor-pointer transform hover:scale-[1.03]">
+  <div className="w-[300px] md:w-[480px] flex-shrink-0 bg-[#d6bfa4] text-black rounded-2xl p-6 md:p-8 shadow-lg border border-[rgba(226,205,179,0.15)] transition-all duration-300
+                  hover:bg-[#46171A] hover:text-white hover:scale-[1.03]
+                  focus:bg-[#46171A] focus:text-white focus:scale-[1.03]
+                  active:bg-[#46171A] active:text-white active:scale-[1.03] cursor-pointer">
     <div className="flex justify-center gap-1 mb-5 text-xl text-[#fcde34]">
-      {"★".repeat(5)}
+      {"★".repeat(rating)}
     </div>
-    <p className="text-sm md:text-base italic leading-relaxed mb-6 relative">
-      {text}
-    </p>
+    <p className="text-sm md:text-base italic leading-relaxed mb-6 relative">{text}</p>
     <div className="pt-5 border-t border-[rgba(226,205,179,0.2)]">
       <h3 className="text-base md:text-lg font-semibold mb-2">{name}</h3>
       <p className="text-xs md:text-sm">{title}</p>
@@ -123,7 +110,7 @@ const TestimonialCard = ({ rating, text, name, title }) => (
   </div>
 );
 
-const testimonials = [
+const testimonialsData = [
   {
     rating: 5,
     text: "Ulu Amir Group transformed our hospitality experience in Bali. Their team's expertise in blending Arabic and Balinese culture created something truly unique.",

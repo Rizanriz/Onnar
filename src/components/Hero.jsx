@@ -11,7 +11,7 @@ const Hero = () => {
       />
       {/* Button */}
       <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2">
-        <button className="bg-[#46171A] font-wa-flat tracking-widest text-white font-light cursor-pointer text-sm md:text-xl py-2 md:py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-[#d44d1f] transition-colors">
+        <button className="bg-[#46171A] font-wa-flat tracking-widest text-white font-light cursor-pointer text-sm md:text-xl py-2 md:py-3 px-6 md:px-8 rounded-full shadow-lg hover:bg-[#d44d1f] focus:bg-[#d44d1f] active:bg-[#d44d1f] transition-colors">
           MAKE A RESERVATION
         </button>
       </div>

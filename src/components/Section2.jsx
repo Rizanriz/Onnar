@@ -14,7 +14,7 @@ const HeroSection = () => {
             & Turkish Delights
           </h2>
           
-          <button className="mt-6 mb-10 bg-[#D7BFA7] text-2xl cursor-pointer text-[#46171A] tracking-wider font-light px-6 py-3 rounded-md hover:bg-[#F15A24] hover:text-white transition">
+          <button className="mt-6 mb-10 bg-[#D7BFA7] text-2xl cursor-pointer text-[#46171A] tracking-wider font-light px-6 py-3 rounded-md hover:bg-[#F15A24] focus:bg-[#F15A24] active:bg-[#F15A24] hover:text-white transition">
             EXPLORE OUR MENU
           </button>
         </div>

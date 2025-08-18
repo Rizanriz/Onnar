@@ -53,7 +53,7 @@ const Footer = () => {
             src="./location.png"
             alt="Location map"
             loading="lazy"
-            className="w-full max-w-[320px] rounded-xl shadow-xl mt-5"
+            className="w-full max-w-[320px] rounded-xl cursor-pointer shadow-xl mt-5 hover:scale-105 focus:scale-105 transition-all duration-300 "
           />
         </div>
 

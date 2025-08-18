@@ -32,7 +32,7 @@ const Footer = () => {
               type="email"
               placeholder="Enter your email address"
               required
-              className="flex-1 min-w-[300px] px-4 py-2 rounded-full border border-[#d9d4c8] text-sm outline-none transition-all duration-300 focus:-translate-y-0.5 focus:shadow-lg shadow-md"
+              className="flex-1 min-w-[300px] px-4 py-2 rounded-full borderba border-[#d9d4c8] text-sm outline-none transition-all duration-300 focus:-translate-y-0.5 focus:shadow-lg shadow-md"
             />
             <button
               type="submit"

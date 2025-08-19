@@ -38,7 +38,7 @@ const MenuItems = () => {
               <div className="bg-gradient-to-b from-[#B94B4B] to-[#D77F75] rounded-3xl pt-10 pb-40 text-center relative overflow-visible shadow-lg">
                 {/* Content */}
                 <div className="mb-8">
-                  <h3 className="font-wa-flat text-white tracking-wider text-2xl lg:text-4xl font-light mb-1">{item.title}</h3>
+                  <h3 className="font-wa-flat text-white tracking-wider text-3xl lg:text-4xl font-light">{item.title}</h3>
                   <p className="text-white inter text-sm font-medium mb-6 opacity-90">{item.subtitle}</p>
                   
                   {/* Button */}

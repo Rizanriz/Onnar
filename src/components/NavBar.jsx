@@ -6,13 +6,36 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-[1000] h-12 md:h-16 mx-auto w-[95%] 
+      className="fixed top-0 left-0 right-0 z-[1000] h-12 md:h-18 mx-auto w-[95%] 
       mt-2 md:mt-5 bg-[#46171A] py-1 md:py-[15px] px-3 md:px-[30px] 
-      rounded-[20px] md:rounded-[50px] shadow-md flex items-center" 
+      rounded-[20px] md:rounded-[50px] shadow-md flex items-center"
     >
-      {/* Mobile menu button */}
+      {/* Company Logo (only visible on mobile, replaces old toggle position) */}
+      <div className="absolute left-3 flex items-center md:hidden">
+        <img
+          src="./logo.png"
+          alt="Company Logo"
+          className="w-[40px] h-[40px] object-contain"
+        />
+      </div>
+
+      {/* Center Spinning Logo (same for all screens) */}
+      <div
+        className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] bg-[#46171A] 
+        cursor-pointer rounded-full flex items-center justify-center 
+        border-[2px] md:border-[3px] border-[#46171A] shadow-md overflow-hidden 
+        mx-auto md:mx-0 md:absolute md:left-0 spin"
+      >
+        <img
+          src="./Group.png"
+          alt="logo"
+          className="w-[40%] md:w-[40%] h-[80%]"
+        />
+      </div>
+
+      {/* Mobile menu button (moved to right side) */}
       <button
-        className="md:hidden text-white p-2 absolute left-3 top-1/2 -translate-y-1/2"
+        className="md:hidden text-white p-2 absolute right-3 top-1/2 -translate-y-1/2"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
         aria-label="Toggle menu"
       >
@@ -46,20 +69,6 @@ const Navbar = () => {
           </svg>
         )}
       </button>
-
-      {/* Logo */}
-      <div
-        className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] bg-[#46171A] 
-        cursor-pointer rounded-full flex items-center justify-center 
-        border-[2px] md:border-[3px] border-[#46171A] shadow-md overflow-hidden 
-        mx-auto md:mx-0 md:absolute md:left-0 spin"  
-      >
-        <img
-          src="./Group.png"
-          alt="logo"
-          className="w-[55%] md:w-[40%] h-[80%]"
-        />
-      </div>
 
       {/* Links */}
       <div

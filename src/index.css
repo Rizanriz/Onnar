@@ -31,3 +31,12 @@
   color:#fff;
   transform: scale(1.03);
 }
+
+.spin:hover{
+  cursor: pointer;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

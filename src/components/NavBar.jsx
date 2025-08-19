@@ -52,8 +52,7 @@ const Navbar = () => {
         className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] bg-[#46171A] 
         cursor-pointer rounded-full flex items-center justify-center 
         border-[2px] md:border-[3px] border-[#46171A] shadow-md overflow-hidden 
-        mx-auto md:mx-0 md:absolute md:left-0 
-        hover:animate-[spin_2s_linear_infinite] focus:animate-[spin_2s_linear_infinite] active:animate-[spin_2s_linear_infinite]"  
+        mx-auto md:mx-0 md:absolute md:left-0 spin"  
       >
         <img
           src="./Group.png"

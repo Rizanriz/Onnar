@@ -130,7 +130,7 @@ const Navbar = () => {
             } flex-col md:absolute md:top-full md:left-0 bg-[#46171A] min-w-[160px] md:min-w-[180px] shadow-md z-[2000] rounded-[6px] mt-2 md:mt-0`}
           >
             <a
-              href="#"
+              href="https://ulu-amir-website.vercel.app"
               className="text-white block py-2 px-4 hover:bg-[#F15A24] transition-colors text-sm md:text-base"
             >
               Ulu Amir

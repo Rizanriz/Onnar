@@ -12,11 +12,10 @@ const Navbar = () => {
     >
       {/* Company Logo (only visible on mobile, replaces old toggle position) */}
       <div className="absolute left-3 flex items-center md:hidden">
-        <img
+        <a href="https://ulu-amir-website.vercel.app"><img 
           src="./logo.png"
           alt="Company Logo"
-          className="w-[60px] h-[60px] object-contain"
-        />
+          className="w-[60px] h-[60px] object-contain"/></a>
       </div>
 
       {/* Center Spinning Logo (same for all screens) */}

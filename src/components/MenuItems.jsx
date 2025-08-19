@@ -35,10 +35,10 @@ const MenuItems = () => {
           {menuItems.map((item, index) => (
             <div key={index} className="relative">
               {/* Card Container */}
-              <div className="bg-gradient-to-b from-[#B94B4B] to-[#D77F75] rounded-3xl pt-10 pb-40 text-center relative overflow-visible shadow-lg">
+              <div className="bg-gradient-to-b from-[#AD4349] to-[#F07042] rounded-3xl pt-10 pb-40 text-center relative overflow-visible shadow-lg">
                 {/* Content */}
                 <div className="mb-8">
-                  <h3 className="font-wa-flat text-white tracking-wider text-3xl lg:text-4xl font-light">{item.title}</h3>
+                  <h3 className="font-wa-flat text-white tracking-wider text-4xl lg:text-5xl font-light">{item.title}</h3>
                   <p className="text-white inter text-sm font-medium mb-6 opacity-90">{item.subtitle}</p>
                   
                   {/* Button */}
@@ -64,10 +64,10 @@ const MenuItems = () => {
         
         {/* Bottom Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <button className="bg-[#46171A] cursor-pointer text-white font-wa-flat text-xl tracking-widest px-8 py-3 rounded-full font-light hover:bg-[#D44D1F] active:bg-[#D44D1F] focus:bg-[#D44D1F] transition-colors duration-300">
+          <button className="bg-[#46171A] cursor-pointer text-white font-wa-flat text-xl tracking-widest px-8 py-3 rounded-xl font-light hover:bg-[#D44D1F] active:bg-[#D44D1F] focus:bg-[#D44D1F] transition-colors duration-300">
             MAKE A RESERVATION
           </button>
-          <button className="bg-[#D6BFA4] cursor-pointer font-wa-flat text-[#46171A] text-xl tracking-widest px-8 py-3 rounded-full font-semibold hover:bg-[#F15A24] active:bg-[#F15A24] focus:bg-[#F15A24] transition-colors duration-300">
+          <button className="bg-[#D6BFA4] cursor-pointer font-wa-flat text-[#46171A] text-xl tracking-widest px-8 py-3 rounded-xl font-semibold hover:bg-[#F15A24] active:bg-[#F15A24] focus:bg-[#F15A24] transition-colors duration-300">
             DOWNLOAD THE MENU CARD
           </button>
         </div>

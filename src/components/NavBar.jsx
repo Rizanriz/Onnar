@@ -133,7 +133,7 @@ const Navbar = () => {
               href="#"
               className="text-white block py-2 px-4 hover:bg-[#F15A24] transition-colors text-sm md:text-base"
             >
-              Venture 1
+              Ulu Amir
             </a>
             <a
               href="#"

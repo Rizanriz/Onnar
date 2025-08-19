@@ -6,7 +6,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className="fixed top-0 left-0 right-0 z-[1000] h-8 md:h-16 mx-auto w-[95%] 
+      className="fixed top-0 left-0 right-0 z-[1000] h-12 md:h-16 mx-auto w-[95%] 
       mt-2 md:mt-5 bg-[#46171A] py-1 md:py-[15px] px-3 md:px-[30px] 
       rounded-[20px] md:rounded-[50px] shadow-md flex items-center" 
     >
@@ -49,11 +49,11 @@ const Navbar = () => {
 
       {/* Logo */}
       <div
-        className="w-[45px] h-[45px] md:w-[100px] md:h-[100px] bg-[#46171A] 
+        className="w-[60px] h-[60px] md:w-[100px] md:h-[100px] bg-[#46171A] 
         cursor-pointer rounded-full flex items-center justify-center 
         border-[2px] md:border-[3px] border-[#46171A] shadow-md overflow-hidden 
         mx-auto md:mx-0 md:absolute md:left-0 
-        hover:animate-[spin_2s_linear_infinite]"  
+        hover:animate-[spin_2s_linear_infinite] focus:animate-[spin_2s_linear_infinite] active:animate-[spin_2s_linear_infinite]"  
       >
         <img
           src="./Group.png"

@@ -26,7 +26,7 @@ const MenuItems = () => {
     <div className="bg-orange-50 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <h2 className="text-5xl font-medium tracking-wide text-center text-[#46171A] mb-16 font-wa-flat">
+        <h2 className="text-4xl md:text-6xl font-medium tracking-wide text-center text-[#46171A] mb-16 font-wa-flat">
           Our Delicious Menu
         </h2>
         
@@ -38,8 +38,8 @@ const MenuItems = () => {
               <div className="bg-gradient-to-b from-[#B94B4B] to-[#D77F75] rounded-3xl pt-10 pb-40 text-center relative overflow-visible shadow-lg">
                 {/* Content */}
                 <div className="mb-8">
-                  <h3 className="playfair text-white inter text-2xl lg:text-4xl font-light mb-1">{item.title}</h3>
-                  <p className="text-white text-sm font-medium mb-6 opacity-90">{item.subtitle}</p>
+                  <h3 className="font-wa-flat text-white tracking-wider text-2xl lg:text-4xl font-light mb-1">{item.title}</h3>
+                  <p className="text-white inter text-sm font-medium mb-6 opacity-90">{item.subtitle}</p>
                   
                   {/* Button */}
                   <button 

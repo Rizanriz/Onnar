@@ -8,7 +8,7 @@ import MenuItems from './components/MenuItems'
 import DeliveryInfo from './components/DeliveryInfo'
 const App = () => {
   return (
-    <div>
+    <div> 
       <Navbar/>
       <Hero/>
       <Section2/>

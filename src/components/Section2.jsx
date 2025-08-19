@@ -7,7 +7,7 @@ const HeroSection = () => {
         
         {/* Left Content */}
         <div className="font-wa-flat text-center md:text-left mt-6 md:mt-0 md:pl-24">
-          <h2 className="text-3xl md:text-4xl lg:text-6xl font-semibold text-[#46171A] leading-tight tracking-wide">
+          <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold text-[#46171A] leading-10 lg:leading-16 tracking-wide">
             Savor the Sunrise <br />
             with{" "}
             <span className="text-[#F15A24]">Authentic Arabic</span> <br />

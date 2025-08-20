@@ -26,7 +26,7 @@ const MenuItems = () => {
     <div className="bg-orange-50 py-16 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
-        <h2 className="text-4xl md:text-6xl font-medium tracking-wide text-center text-[#46171A] mb-16 font-wa-flat">
+        <h2 className="text-5xl font-wa-flat font-medium  tracking-wide text-center text-[#46171A] mb-16 font-wa-flat">
           Our Delicious Menu
         </h2>
         

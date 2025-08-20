@@ -7,7 +7,7 @@ const HeroSection = () => {
         
         {/* Left Content */}
         <div className="font-wa-flat text-center md:text-left mt-6 md:mt-0 md:pl-24">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl font-semibold text-[#46171A] leading-10 lg:leading-16 tracking-wide">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl font-semibold text-[#46171A] leading-10 lg:leading-16 tracking-wide">
             Savor the Sunrise <br />
             with{" "}
             <span className="text-[#F15A24]">Authentic Arabic</span> <br />
@@ -32,7 +32,7 @@ const HeroSection = () => {
 
        <div className="w-full bg-[#ECE7DA] flex justify-center px-4 md:px-20 py-12">
       <div className="max-w-4xl text-center">
-        <h2 className="font-wa-flat text-3xl md:text-5xl font-medium text-[#46171A] mb-4">
+        <h2 className="text-5xl text-[#46171A] font-wa-flat font-medium  mb-4">
           Welcome to <span className="text-[#F15A24]">On Nar</span>
         </h2>
         <p className="inter text-[#46171A] font-medium text-sm md:text-base leading-relaxed">

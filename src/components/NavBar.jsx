@@ -15,7 +15,7 @@ const Navbar = () => {
         <a href="https://ulu-amir-website.vercel.app"><img 
           src="./logo.png"
           alt="Company Logo"
-          className="w-[60px] h-[60px] object-contain"/></a>
+          className="w-[80px] h-[60px] object-contain"/></a>
       </div>
 
       {/* Center Spinning Logo (same for all screens) */}

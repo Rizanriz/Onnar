@@ -32,7 +32,7 @@
   transform: scale(1.03);
 }
 
-.spin:hover{
+.spin{
   cursor: pointer;
   animation: spin 2s linear infinite;
 }
